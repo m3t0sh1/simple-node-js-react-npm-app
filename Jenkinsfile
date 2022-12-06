@@ -1,6 +1,7 @@
 pipeline {
     agent {
         docker {
+            reuseNode true
             image 'node:lts-bullseye-slim'
             label 'docker-agent'
             args '-p 3000:3000' 
