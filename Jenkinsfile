@@ -6,10 +6,10 @@ pipeline {
             label 'docker-agent'
             args '-p 3000:3000' 
         }
-        environment {
-            HOME = "${WORKSPACE}"
-            NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
-        }
+    }
+    environment {
+        HOME = "${WORKSPACE}"
+        NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
     }
     stages {
         stage('Build') { 
